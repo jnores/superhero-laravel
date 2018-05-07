@@ -12,8 +12,13 @@
 */
 
 Route::get('/', 'WelcomeController@index');
-
+Route::get('/about', 'WelcomeController@about');
 Route::get('home', 'HomeController@index');
+
+
+Route::get('superheros', 'SuperherosController@index');
+Route::get('superheros/{id}', 'SuperherosController@edit');
+Route::post('superheros', 'SuperherosController@store');
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',
