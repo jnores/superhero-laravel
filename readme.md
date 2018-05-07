@@ -41,9 +41,13 @@ No se implementa un registro de superpoderes. Los superpoderes se cargan como un
 Primero debemos configurar las variables de entorno. Para esto copiamos el archivo ".env.example" como ".env" configurando la conexión a la base de datos.
 
 Luego iniciamos la aplicacion. Para esto usamos comando artisan que se encuentra en el root del proyecto.
- 1. Iniciamos la aplicacion con:
+ 1. Creamos alas tablas necesatias en DB con:
+    ``` ./artisan migrate ```
+
+ 2. Iniciamos la aplicacion con:
     ``` ./artisan up ```
- 2. Iniciamos un servidor con artisan (por defecto en el puerto 8000):
+
+ 3. Iniciamos un servidor con artisan (por defecto en el puerto 8000):
     ``` ./artisan serve ```
 
 Para ejecutar los UnitTest necesitamos que la aplicacion este iniciada con ```artisan up```
